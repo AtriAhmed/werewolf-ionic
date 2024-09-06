@@ -32,6 +32,9 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import RolesSelection from './pages/RolesSelection';
+import AssignRoles from './pages/AssignRoles';
+import GameStarted from './pages/GameStarted';
 
 setupIonicReact();
 
@@ -44,6 +47,15 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/">
           <Redirect to="/home" />
+        </Route>
+        <Route path="/roles">
+          <RolesSelection />
+        </Route>
+        <Route path="/assign-roles">
+          <AssignRoles />
+        </Route>
+        <Route path="/game-started">
+          <GameStarted />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
